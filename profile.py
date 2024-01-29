@@ -25,6 +25,7 @@ pc.defineParameter("hardware_type",
 imageList = [
     ('urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU20-64-STD', 'UBUNTU 20.04'),
     ('urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU18-64-STD', 'UBUNTU 18.04'),
+    ('urn:publicid:IDN+clemson.cloudlab.us+image+servelesslegoos-PG0:ubuntu20.04-dpdk21.11.6', 'UBUNTU 20.04+mlx dpdk'),
     # ('urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU14-64-STD', 'UBUNTU 14.04'),
     # ('urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU16-64-STD', 'UBUNTU 16.04'),
     # ('urn:publicid:IDN+utah.cloudlab.us+image+emulab-ops:UBUNTU14-64-ARM', 'UBUNTU 14.04 ARM'),
@@ -114,7 +115,7 @@ for i in range(num):
     else:
         lan.addInterface(iface)
         
-    # node.addService(pg.Execute(shell="sh", command="sudo /local/repository/run.sh"))
+    node.addService(pg.Execute(shell="sh", command="sudo /local/repository/run.sh"))
 
 
 # Install and execute scripts on the node.
