@@ -23,7 +23,6 @@ pc.defineParameter("hardware_type",
 
 # Pick your OS.
 imageList = [
-    ('default', 'Default Image'),
     ('urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU20-64-STD', 'UBUNTU 20.04'),
     ('urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU18-64-STD', 'UBUNTU 18.04'),
     # ('urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU14-64-STD', 'UBUNTU 14.04'),
@@ -35,7 +34,7 @@ imageList = [
 
 pc.defineParameter("osImage", "Select OS image",
                    portal.ParameterType.IMAGE,
-                   imageList[3], imageList,
+                   imageList[0], imageList,
                    longDescription="Most clusters have this set of images, " +
                    "pick your favorite one.")
 
